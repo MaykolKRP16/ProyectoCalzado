@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+  <link rel="icon" type="image" href="../img/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+  <title>Empresa LionStep | Inicio</title>
+</head>
+
+<body class="pt-16">
+
+  <!-- navbar -->
+  <nav class="fixed top-0 w-full bg-gray-800 text-white z-50">
+    <div class=" mx-auto px-5 border rounded-b-lg shadow-lg">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+
+          <!-- logo -->
+          <div class="hover:bg-gray-600">
+            <a href="#Inicio" class="flex items-center py-5 px-3">
+              <svg class="h-6 w-6 mr-1 stroke-2 stroke-red-500 fill-orange-300"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <img src="../img/logo leon.jpg" alt="LionStep Logo" class="h-8 w-8 object-cover rounded-full shadow-lg">
+              </svg>
+              <span class="font-mono font-bold">LionStep</span>
+            </a>
+          </div>
+
+          <!-- change py to my for hover, add hover bg 200 rounded-->
+          <!-- primary nav -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="index.html" class="py-5 px-3 hover:bg-gray-600">Nosotros</a>
+            <a href="Locales.html" class="py-5 px-3 hover:bg-gray-600">Locales</a>
+            <a href="#" class="py-5 px-3 hover:bg-gray-600">Catálogo</a>
+            <a href="#" class="py-5 px-3 hover:bg-gray-600">Contacto</a>
+          </div>
+
+        </div>
+
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#Registrate" class="py-5 px-3 hover:bg-gray-600">Registrarse</a>
+          <a href="#" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300
+            text-yellow-900 hover:text-yellow-800 rounded-lg transition
+            duration-300 text-center">Iniciar sesión</a>
+        </div>
+
+        <!-- mobile button -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="stroke-black stroke-2 w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu hidden md:hidden bg-white text-sm">
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Productos</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Locales</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Nosotros</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Contacto</a>
+    </div>
+
+  </nav>
+
+  <!-- hero shot -->
+  <section id="Inicio">
+    <div class="container mx-auto max-w-2xl lg:max-w-4xl py-20 lg:py-32 px-10
+      lg:px-0">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+
+        <!-- encabezado -->
+        <div class="flex flex-col items-center lg:items-start gap-y-4">
+          <!-- titulo -->
+          <p class="text-8xl font-mono font-bold">LionStep</p>
+
+          <!-- subtitulo -->
+          <p class="text-md text-center lg:text-left">
+            Tu tienda virtual de confianza para productos de clazados de gran calidad.
+          </p>
+
+          <!-- cta -->
+          <div class="flex flex-row justify-center w-full gap-8 lg:gap-x-12
+            text-center font-bold text-lg text-red-600">
+            <button href="#" class="w-32 py-2 rounded-full border-4
+              border-orange-300 shadow-xl hover:border-orange-600
+              hover:shadow-none hover:text-red-900 transition
+              duration-300">Locales</button>
+            <button href="#" class="w-32 py-2 rounded-full border-4
+              border-orange-300 shadow-xl hover:border-orange-600
+              hover:shadow-none hover:text-red-900 transition
+              duration-300">Catálogo</button>
+          </div>
+        </div>
+
+        <!-- imagen -->
+        <img cl src="../img/paso de leon.png" alt="Tienda" class=" mx-auto w-[440px] lg:w-[700px]">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- beneficios -->
+  <section>
+    <div class="bg-amber-100">
+      <div class="container mx-auto max-w-2xl lg:max-w-6xl py-20 lg:py-32 px-10
+        lg:px-0">
+
+        <!-- titulo -->
+        <p class="text-4xl text-center mb-6 py-2 font-bold font-sans">
+          LO QUE NOS DEFINE</p>
+
+        <!-- items -->
+        <div class="flex flex-col lg:flex-row items-center justify-evenly gap-8">
+
+          <!-- característica 1 -->
+          <div class="w-2/3 lg:w-3/5 px-6 py-4 bg-white border-8 border-yellow-600
+            rounded-2xl shadow-2xl h-96 flex flex-col">
+            <p class="text-xl text-left">Rapidez y facilidad</p>
+            <p class="text-sm text-justify text-gray-500">
+              Nuestra tienda virtual está especialmente diseñada para que
+              todo tipo de personas puedan manejarla, además, las compras solo
+              se hacen con unos cuantos clicks.</p>
+
+            <!-- img -->
+            <img src="../img/compras.jpg" alt="" class="w-56 my-auto mx-auto">
+          </div>
+
+          <!-- característica 2 -->
+          <div class="w-2/3 lg:w-3/5 px-6 py-4 bg-white border-8 border-yellow-600
+            rounded-2xl shadow-2xl h-96 flex flex-col">
+            <p class="text-xl">Compra segura</p>
+            <p class="text-sm text-justify text-gray-500">
+              Contamos con los mejores mecanismos de seguridad, así no
+              tendras que preocuparte por sufrir alguna estafa u otro
+              inconveniente.</p>
+
+            <!-- img -->
+            <img src="../img/seguridad.png" alt="" class="w-36 my-auto mx-auto">
+          </div>
+
+          <!-- característica 3 -->
+          <div class="w-2/3 lg:w-3/5 px-6 py-4 bg-white border-8 border-yellow-600
+            rounded-2xl shadow-2xl h-96 flex flex-col">
+            <p class="text-xl">Atención al cliente</p>
+            <p class="text-sm text-justify text-gray-500">
+              Si tienes alguna duda con respecto a un producto, puedes
+              contactarnos por nuestras redes sociales o llamarnos a nuestro
+              teléfono de contacto</p>
+
+            <!-- img -->
+            <img src="../img/atencion.png" alt="" class="w-48 my-auto mx-auto">
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- reinforcement statement -->
+  <section>
+    <div class="container mx-auto max-w-2xl lg:max-w-5xl py-20 lg:py-32 px-10
+      lg:px-0">
+      <div class="flex flex-col lg:flex-row-reverse items-center justify-between
+        gap-16">
+
+        <!-- texto -->
+        <div class="flex flex-col items-center lg:items-start text-center gap-y-2">
+
+          <!-- titulo -->
+          <p class="text-4xl mb-4 py-2 font-bold font-sans">
+            TE LO LLEVAMOS DONDE ESTES</p>
+          <p>A tu domicilio o a tu trabajo, solo indicanosló y te entregaremos tu
+            pedido <span class="text-red-500 italic">inmediatamente</span>.</p>
+          <p>También podras rastrear tu pedido mediante esta página web, para que
+            siempre estes al tanto del estado actual de tu pedido.</p>
+
+        </div>
+
+        <!-- img -->
+        <img src="../img/repartidor.webp" alt="Repartidor" class="max-w-lg
+        lg:w-2/5">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- opiniones -->
+  <section>
+    <div class="bg-orange-100">
+      <div class="container mx-auto max-w-5xl py-20 lg:py-32 px-10 lg:px-0">
+        <p>Opiniones</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta -->
+  <section id="Registrate">
+    <div class="container mx-auto max-w-2xl lg:max-w-5xl py-20 lg:py-32 px-10
+      lg:px-0">
+      <div class="flex flex-col lg:flex-row items-center justify-around">
+
+        <!-- beneficios -->
+        <div class="grid grid-cols-1 gap-y-3 mb-10 lg:mb-0 mx-20 lg:mx-40">
+
+          <!-- titulo -->
+          <p class="text-center text-4xl font-bold font-sans">BENEFICIOS DE SER
+            <a class="text-red-500 italic">PARTNER</a>
+          </p>
+
+          <!-- beneficios -->
+          <p class="flex flex-none">
+            <svg class="h-5 w-5 my-auto mr-1 stroke-2 stroke-orange-400 fill-none"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048
+              8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0
+              003 2.48z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546
+              5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+            </svg>
+            Tendrás prioridad sobre los demás.
+          </p>
+          <p class="flex flex-none">
+            <svg class="h-5 w-5 my-auto mr-1 stroke-2 stroke-orange-400 fill-none"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048
+              8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0
+              003 2.48z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546
+              5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+            </svg>
+            Descuentos y envios gratis todos los meses.
+          </p>
+          <p class="flex flex-none">
+            <svg class="h-5 w-5 my-auto mr-1 stroke-2 stroke-orange-400 fill-none"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048
+              8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0
+              003 2.48z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546
+              5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/>
+            </svg>
+            Productos exclusivos.
+          </p>
+          <p class="flex flex-none">
+            <svg class="h-5 w-5 my-auto mr-1 stroke-2 stroke-orange-400 fill-none"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048
+              8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0
+              003 2.48z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546
+              5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+            </svg>
+            Merchandising y regalos exclusivos.
+          </p>
+
+        </div>
+
+        <!-- cta -->
+        <form action="" class="grid gap-8 border-4 border-amber-700 rounded-2xl
+          w-4/5 max-w-xs px-6 py-4 bg-orange-300">
+
+          <!-- titulo -->
+          <p id="subscribe" class="font-bold text-red-800">SUSCRÍBETE</p>
+
+          <!-- textboxes -->
+          <div class="relative">
+            <input type="text" id="name" class="bg-orange-300 peer border-b-2
+            border-b-stone-500 w-full focus:outline-none placeholder-transparent"
+            placeholder="Nombre"/>
+            <label for="name" class="absolute -top-6 left-0 text-sm
+                text-gray-600 transition-all peer-placeholder-shown:text-gray-800
+                peer-placeholder-shown:text-base peer-placeholder-shown:top-0
+                peer-focus:-top-6 peer-focus:left-0 peer-focus:text-gray-600
+                peer-focus:text-sm">Nombre</label>
+          </div>
+          <div class="relative">
+            <input type="email" id="email" class="bg-orange-300 peer border-b-2
+            border-b-stone-500 w-full focus:outline-none placeholder-transparent"
+            placeholder="Email"/>
+            <label for="name" class="absolute -top-6 left-0 text-sm
+                text-gray-800 transition-all peer-placeholder-shown:text-gray-800
+                peer-placeholder-shown:text-base peer-placeholder-shown:top-0
+                peer-focus:-top-6 peer-focus:left-0 peer-focus:text-gray-600
+                peer-focus:text-sm">Email</label>
+          </div>
+
+          <!-- boton -->
+          <button class="place-self-center bg-red-700 border-4 border-red-800
+            rounded-full shadow-xl hover:bg-orange-700 hover:shadow-none transition
+            duration-300 px-3 py-2 mb-4 text-white">REGISTRARSE</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-5 lg:px-0 ">
+        <div class="text-center">
+          <p class="text-bold">Rodrigo Guevara - <samp class="italic">959889560</samp></p>
+        </div>
+      </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

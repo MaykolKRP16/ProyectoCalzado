@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+  <link rel="icon" type="image" href="../img/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+  <title>Empresa LionStep | Inicio</title>
+</head>
+
+<body class="pt-16">
+
+  <!-- navbar -->
+  <nav class="fixed top-0 w-full bg-gray-800 text-white z-50">
+    <div class=" mx-auto px-5 border rounded-b-lg shadow-lg">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+
+          <!-- logo -->
+          <div class="hover:bg-gray-600">
+            <a href="index.html" class="flex items-center py-5 px-3">
+              <svg class="h-6 w-6 mr-1 stroke-2 stroke-red-500 fill-orange-300"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <img src="../img/logo leon.jpg" alt="LionStep Logo" class="h-8 w-8 object-cover rounded-full shadow-lg">
+              </svg>
+              <span class="font-mono font-bold">LionStep</span>
+            </a>
+          </div>
+
+          <!-- change py to my for hover, add hover bg 200 rounded-->
+          <!-- primary nav -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="#Inicio" class="py-5 px-3 hover:bg-gray-600">Nosotros</a>
+            <a href="#" class="py-5 px-3 hover:bg-gray-600">Locales</a>
+            <a href="#" class="py-5 px-3 hover:bg-gray-600">Catálogo</a>
+            <a href="#" class="py-5 px-3 hover:bg-gray-600">Contacto</a>
+          </div>
+
+        </div>
+
+        <!-- secondary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#Registrate" class="py-5 px-3 hover:bg-gray-600">Registrarse</a>
+          <a href="#" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300
+            text-yellow-900 hover:text-yellow-800 rounded-lg transition
+            duration-300 text-center">Iniciar sesión</a>
+        </div>
+
+        <!-- mobile button -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="stroke-black stroke-2 w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu hidden md:hidden bg-white text-sm">
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Productos</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Locales</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Nosotros</a>
+      <a href="#" class="block py-2 px-4 hover:bg-gray-200">Contacto</a>
+    </div>
+
+  </nav>
+
+  <section id="locales" class="mt-16 p-4 border border-gray-300">
+    <h2 class="text-3xl font-bold">Nuestros Locales de Atención</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Local 1 -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <img src="local1.jpg" alt="Local 1" class="h-48 w-full object-cover rounded-lg">
+        <h3 class="mt-4 text-xl font-bold">Local 1</h3>
+        <p class="mt-2 text-gray-600">Dirección: Calle Falsa 123, Ciudad XYZ</p>
+        <p class="mt-1 text-gray-600">Horario: Lunes a Viernes, 10:00 AM - 8:00 PM</p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-5 lg:px-0 ">
+      <div class="text-center">
+        <p class="text-bold">Rodrigo Guevara - <samp class="italic">959889560</samp></p>
+      </div>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+
+</html>

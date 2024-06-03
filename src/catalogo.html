@@ -17,14 +17,27 @@
   .slick-slide {
     padding: 0 8px; /* Espacio entre los elementos del carrusel */
   }
-  .slick-prev,
-  .slick-next {
-    z-index: 1; /* Asegura que los botones de navegación estén por encima del contenido */
-  }
-  .slick-prev:before,
-  .slick-next:before {
-    color: #3182ce; /* Color de los botones de navegación */
-  }
+  /* Establece el tamaño de fuente para hacer los botones más grandes */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 56px; /* Tamaño del icono */
+  color: #1b426780; /* Color de los botones de navegación */
+}
+
+/* Establece la opacidad inicial de los botones en 0 */
+.slick-prev,
+.slick-next {
+  z-index: 1; /* Asegura que los botones de navegación estén por encima del contenido */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+  right: 10px;
+}
+
+/* Cambia la opacidad a 1 cuando el cursor pasa sobre los botones */
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: 1;
+}
 </style>
 
 </head>
@@ -76,12 +89,11 @@
             </div>
         </div>
     </div>
-    <!-- mobile menu -->
     <div class="mobile-menu hidden md:hidden bg-gray-700 text-sm">
-        <a href="#" class="block py-2 px-4 hover:bg-gray-200">Productos</a>
-        <a href="#" class="block py-2 px-4 hover:bg-gray-200">Locales</a>
-        <a href="#" class="block py-2 px-4 hover:bg-gray-200">Nosotros</a>
-        <a href="#" class="block py-2 px-4 hover:bg-gray-200">Contacto</a>
+        <a href="index.html#nosotros" class="block py-2 px-4 hover:bg-gray-200">Nosotros</a>
+        <a href="Locales.html" class="block py-2 px-4 hover:bg-gray-200">Locales</a>
+        <a href="catalogo.html" class="block py-2 px-4 hover:bg-gray-200">Catalogo</a>
+        <a href="index.html#contacto" class="block py-2 px-4 hover:bg-gray-200">Contacto</a>
     </div>
 </nav>
 

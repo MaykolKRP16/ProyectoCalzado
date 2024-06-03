@@ -9,6 +9,24 @@
   <link rel="icon" type="image" href="../img/favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Empresa LionStep | Inicio</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<style>
+  .slick-slide {
+    padding: 0 8px; /* Espacio entre los elementos del carrusel */
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 1; /* Asegura que los botones de navegación estén por encima del contenido */
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #3182ce; /* Color de los botones de navegación */
+  }
+</style>
+
 </head>
 
 <body class="pt-16 bg-gray-100">
@@ -68,181 +86,301 @@
     </div>
   </div>
 
-  <!-- Catálogo de productos -->
-  <div class="container mx-auto grid grid-cols-1 gap-6"> 
-    
-    <section class="p-6">
-      <h1 class="text-2xl font-bold mb-4">Zapatos Deportivos</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Producto 1 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover">
-              <div class="p-4">
-                  <h2 class="text-lg font-semibold">Zapato Deportivo</h2>
-                  <p class="text-gray-600">$50.00</p>
-                  <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-              </div>
-          </div>
-          <!-- Producto 1 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-semibold">Zapato Deportivo</h2>
-                <p class="text-gray-600">$50.00</p>
-                <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-            </div>
-        </div>
-        <!-- Producto 1 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover">
-          <div class="p-4">
-              <h2 class="text-lg font-semibold">Zapato Deportivo</h2>
-              <p class="text-gray-600">$50.00</p>
-              <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-          </div>
-          </div>
-          <!-- Producto 1 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-semibold">Zapato Deportivo</h2>
-                <p class="text-gray-600">$50.00</p>
-                <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-            </div>
-        </div>
-      </div>
-  </section>
+ <!-- Catálogo de productos -->
+<div class="container mx-auto p-6 grid grid-cols-1 gap-6">
 
-  <!-- Sección de Zapatos Casuales -->
-  <section class="p-6">
-      <h1 class="text-2xl font-bold mb-4">Zapatos Casuales</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Producto 2 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover">
-              <div class="p-4">
-                  <h2 class="text-lg font-semibold">Zapato Casual</h2>
-                  <p class="text-gray-600">$40.00</p>
-                  <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-              </div>
-          </div>
-          <!-- Producto 2 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-semibold">Zapato Casual</h2>
-                <p class="text-gray-600">$40.00</p>
-                <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-            </div>
-        </div>
-        <!-- Producto 2 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover">
-          <div class="p-4">
-              <h2 class="text-lg font-semibold">Zapato Casual</h2>
-              <p class="text-gray-600">$40.00</p>
-              <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-          </div>
-      </div>
-      <!-- Producto 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover">
+  <!-- Sección de Zapatos Deportivos como carrusel -->
+<section class="mb-12 p-6 border border-gray-300 bg-blue-100 rounded-lg">
+  <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Zapatos Deportivos</h1>
+  
+  
+  <!-- Contenedor del carrusel -->
+  <div class="slick-carousel">
+    <!-- Producto 1 -->
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
-            <h2 class="text-lg font-semibold">Zapato Casual</h2>
-            <p class="text-gray-600">$40.00</p>
-            <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Deportivo</h2>
+          <p class="text-gray-600">$50.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
         </div>
-    </div>
-    
       </div>
-  </section>
+    </div>
 
-  <!-- Sección de Zapatos Elegantes -->
-  <section class="p-6">
-      <h1 class="text-2xl font-bold mb-4">Zapatos Elegantes</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Producto 3 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover">
-              <div class="p-4">
-                  <h2 class="text-lg font-semibold">Zapato Elegante</h2>
-                  <p class="text-gray-600">$70.00</p>
-                  <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-              </div>
-          </div>
-          <!-- Producto 3 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-semibold">Zapato Elegante</h2>
-                <p class="text-gray-600">$70.00</p>
-                <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-            </div>
-        </div>
-        <!-- Producto 3 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover">
-          <div class="p-4">
-              <h2 class="text-lg font-semibold">Zapato Elegante</h2>
-              <p class="text-gray-600">$70.00</p>
-              <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-          </div>
-      </div>
-      <!-- Producto 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover">
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
-            <h2 class="text-lg font-semibold">Zapato Elegante</h2>
-            <p class="text-gray-600">$70.00</p>
-            <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Deportivo</h2>
+          <p class="text-gray-600">$50.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
         </div>
-    </div>
       </div>
-  </section>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Deportivo</h2>
+          <p class="text-gray-600">$50.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Deportivo</h2>
+          <p class="text-gray-600">$50.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Deportivo</h2>
+          <p class="text-gray-600">$50.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/deportivo.webp" alt="Zapato Deportivo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Deportivo</h2>
+          <p class="text-gray-600">$50.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repite los productos según sea necesario -->
+  </div>
+</section>
 
-  <!-- Sección de Zapatos de Senderismo -->
-  <section class="p-6">
-      <h1 class="text-2xl font-bold mb-4">Zapatos de Senderismo</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Producto 4 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover">
-              <div class="p-4">
-                  <h2 class="text-lg font-semibold">Zapato de Senderismo</h2>
-                  <p class="text-gray-600">$60.00</p>
-                  <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-              </div>
-          </div>
-          <!-- Producto 4 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-semibold">Zapato de Senderismo</h2>
-                <p class="text-gray-600">$60.00</p>
-                <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-            </div>
-        </div>
-        <!-- Producto 4 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover">
-          <div class="p-4">
-              <h2 class="text-lg font-semibold">Zapato de Senderismo</h2>
-              <p class="text-gray-600">$60.00</p>
-              <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
-          </div>
-      </div>
-      <!-- Producto 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover">
+<section class="mb-12 p-6 border border-gray-300 bg-green-100 rounded-lg">
+  <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Zapatos Casuales</h1>
+  
+  
+  <!-- Contenedor del carrusel -->
+  <div class="slick-carousel">
+    <!-- Producto 1 -->
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
-            <h2 class="text-lg font-semibold">Zapato de Senderismo</h2>
-            <p class="text-gray-600">$60.00</p>
-            <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg">Añadir al carrito</button>
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Casual</h2>
+          <p class="text-gray-600">$40.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
         </div>
-    </div>
       </div>
-  </section>
+    </div>
+
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Casual</h2>
+          <p class="text-gray-600">$40.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Casual</h2>
+          <p class="text-gray-600">$40.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Casual</h2>
+          <p class="text-gray-600">$40.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Casual</h2>
+          <p class="text-gray-600">$40.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/casual.jpeg" alt="Zapato Casual" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Casual</h2>
+          <p class="text-gray-600">$40.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repite los productos según sea necesario -->
+  </div>
+</section>
+
+<section class="mb-12 p-6 border border-gray-300 bg-yellow-100 rounded-lg">
+  <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Zapatos Elegantes</h1>
+  
+  
+  <!-- Contenedor del carrusel -->
+  <div class="slick-carousel">
+    <!-- Producto 1 -->
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Elegante</h2>
+          <p class="text-gray-600">$70.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Elegante</h2>
+          <p class="text-gray-600">$70.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Elegante</h2>
+          <p class="text-gray-600">$70.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Elegante</h2>
+          <p class="text-gray-600">$70.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Elegante</h2>
+          <p class="text-gray-600">$70.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/elegante.webp" alt="Zapato Elegante" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato Elegante</h2>
+          <p class="text-gray-600">$70.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repite los productos según sea necesario -->
+  </div>
+</section>
+
+<section class="mb-12 p-6 border border-gray-300 bg-red-100 rounded-lg">
+  <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Zapatos de Senderismo</h1>
+  
+  
+  <!-- Contenedor del carrusel -->
+  <div class="slick-carousel">
+    <!-- Producto 1 -->
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato de Senderismo</h2>
+          <p class="text-gray-600">$60.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato de Senderismo</h2>
+          <p class="text-gray-600">$60.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato de Senderismo</h2>
+          <p class="text-gray-600">$60.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato de Senderismo</h2>
+          <p class="text-gray-600">$60.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato de Senderismo</h2>
+          <p class="text-gray-600">$60.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slide">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <img src="../img/de senderismo.jpeg" alt="Zapato de Senderismo" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Zapato de Senderismo</h2>
+          <p class="text-gray-600">$60.00</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repite los productos según sea necesario -->
+  </div>
+</section>
+
 </div>
+
+
 
   <footer id="" class="bg-gray-500 text-white">
     <div class="container mx-auto px-5 lg:px-0 py-2">
@@ -251,6 +389,38 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <!-- Script para inicializar Slick Carousel -->
+  <script>
+    $(document).ready(function(){
+      $('.slick-carousel').slick({
+        infinite: true,
+        slidesToShow: 4, // Muestra 4 productos a la vez
+        slidesToScroll: 1, // Navega de 1 en 1
+        prevArrow: '<button type="button" class="slick-prev">&#8592;</button>', // Botón de navegación izquierdo
+        nextArrow: '<button type="button" class="slick-next">&#8594;</button>', // Botón de navegación derecho
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3, // Cambia a 3 productos en resoluciones más pequeñas
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2, // Cambia a 2 productos en resoluciones aún más pequeñas
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1, // Cambia a 1 producto en dispositivos móviles
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
 
 </html>

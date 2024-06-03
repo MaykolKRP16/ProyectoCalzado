@@ -7,72 +7,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="../css/styles.css" />
   <link rel="icon" type="image" href="../img/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Empresa LionStep | Inicio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body class="pt-16">
-
   <!-- navbar -->
-  <nav class="fixed top-0 w-full bg-gray-800 text-white z-50">
-    <div class=" mx-auto px-5 border rounded-b-lg shadow-lg">
+  <nav class="fixed top-0 w-full text-white z-50">
+    <div class="bg-gray-700 px-5 border border-gray-600 shadow-lg">
       <div class="flex justify-between">
         <div class="flex space-x-4">
-
           <!-- logo -->
           <div class="hover:bg-gray-600">
             <a href="index.html" class="flex items-center py-5 px-3">
-              <svg class="h-6 w-6 mr-1 stroke-2 stroke-red-500 fill-orange-300"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <img src="../img/paso de leon.png" alt="LionStep Logo" class="h-8 w-8 object-cover rounded-full shadow-lg">
+              <img src="../img/paso de leon.png" alt="LionStep Logo"
+                class="h-8 w-8 object-cover rounded-full shadow-lg">
               </svg>
-              <span class="font-mono font-bold">LionStep</span>
+              <span class="ml-1 font-mono font-bold">LionStep</span>
             </a>
           </div>
-
           <!-- change py to my for hover, add hover bg 200 rounded-->
           <!-- primary nav -->
           <div class="hidden md:flex items-center space-x-4">
-            <a href="#Inicio" class="py-5 px-3 hover:bg-gray-600">Nosotros</a>
-            <a href="#" class="py-5 px-3 hover:bg-gray-600">Locales</a>
-            <a href="#" class="py-5 px-3 hover:bg-gray-600">Catálogo</a>
-            <a href="#" class="py-5 px-3 hover:bg-gray-600">Contacto</a>
+            <a href="index.html#nosotros" class="py-5 px-3 hover:bg-gray-600 font-mono">Nosotros</a>
+            <a href="Locales.html" class="py-5 px-3 hover:bg-gray-600 font-mono">Locales</a>
+            <a href="catalogo.html" class="py-5 px-3 hover:bg-gray-600 font-mono">Catálogo</a>
+            <a href="index.html#contacto" class="py-5 px-3 hover:bg-gray-600 font-mono">Contacto</a>
           </div>
-
         </div>
-
         <!-- secondary nav -->
         <div class="hidden md:flex items-center space-x-1">
-          <a href="#Registrate" class="py-5 px-3 hover:bg-gray-600">Registrarse</a>
-          <a href="#" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300
-            text-yellow-900 hover:text-yellow-800 rounded-lg transition
-            duration-300 text-center">Iniciar sesión</a>
+          <a href="index.html#contacto" class="py-5 px-3 hover:bg-gray-600 font-mono">Registrarse</a>
+          <a href="#" class="py-2 px-3 bg-gray-800 hover:bg-gray-600
+            text-white rounded-lg transition duration-300 text-center font-mono">Iniciar sesión</a>
         </div>
-
-        <!-- Botón móvil -->
-<div class="md:hidden flex items-center">
-  <button class="mobile-menu-button" aria-label="Abrir menú">
-    <svg class="stroke-black stroke-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-    </svg>
-  </button>
-</div>
-
+        <!-- mobile button -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg class="stroke-black stroke-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-
     <!-- mobile menu -->
-    <div class="mobile-menu hidden md:hidden bg-white text-sm">
+    <div class="mobile-menu hidden md:hidden bg-gray-700 text-sm">
       <a href="#" class="block py-2 px-4 hover:bg-gray-200">Productos</a>
       <a href="#" class="block py-2 px-4 hover:bg-gray-200">Locales</a>
       <a href="#" class="block py-2 px-4 hover:bg-gray-200">Nosotros</a>
       <a href="#" class="block py-2 px-4 hover:bg-gray-200">Contacto</a>
     </div>
-
   </nav>
 
   <section id="locales" class=" mt-16 p-4 border border-gray-300">
-    <h2 class="text-3xl font-bold">Nuestros Locales de Atención</h2>
+    <h2 class="text-4xl mb-2 font-bold font-mono">Nuestros Locales de Atención</h2>
     <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Local 1 -->
         <div class="bg-gray-100 shadow-md rounded-lg p-6 flex flex-col lg:flex-row">
@@ -113,13 +102,12 @@
     </div>
 </section>
 
-  <footer class="bg-gray-800 text-white">
-    <div class="container mx-auto px-5 lg:px-0 ">
-      <div class="text-center">
-        <p class="text-bold">Rodrigo Guevara - <samp class="italic">959889560</samp></p>
-      </div>
+  <!-- footer -->
+  <footer id="" class="bg-gray-500 text-white">
+    <div class="container mx-auto px-5 lg:px-0 py-2">
+        <p class="text-bold text-center font-mono">©2024 Derechos Reservados | LionStep | Perú</p>
     </div>
-</footer>
+  </footer>
 
 <script src="../js/main.js"></script>
 </body>
